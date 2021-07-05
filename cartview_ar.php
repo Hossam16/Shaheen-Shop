@@ -79,7 +79,7 @@ if (isset($_POST['UpdateInfo']) or isset($_POST['CheckOut'])) {
 
     <?php
     $conn79 = new config();
-    $sql79 = "SELECT products.ID,products.ArName,products.Stock,products.Price,products.BSale,products.SalePrice,products.MaxAmount,products.Photo,products.Status,products.Size,cart.id as CID,SUM(cart.Count) AS Count,cart.Date FROM products INNER JOIN cart on products.ID=cart.PID where cart.UID='$uid' GROUP BY products.ID;";
+    $sql79 = "SELECT products.ID,products.SID,products.ArName,products.Stock,products.Price,products.BSale,products.SalePrice,products.MaxAmount,products.Photo,products.Status,products.Size,cart.id as CID,SUM(cart.Count) AS Count,cart.Date FROM products INNER JOIN cart on products.ID=cart.PID where cart.UID='$uid' GROUP BY products.ID;";
     $result79 = $conn79->datacon()->query($sql79);
     if (mysqli_num_rows($result79) == 0) {
         $Cart = 1;
@@ -130,6 +130,9 @@ if (isset($_POST['UpdateInfo']) or isset($_POST['CheckOut'])) {
                                     <td class="cart_description" style="border: 1px; border-style: inset;">
                                         <h4><a href=""><?php echo $row79['ArName'] ?></a></h4>
                                         <p>Web ID : <?php echo $row79['ID']; ?></p>
+                                        <?php if ($row79['SID'] == 2) { ?>
+                                            <p><mark style="padding: 5px; background:#e81f25;border-radius: 5px;color:white;">برجاء العلم انه يتم احتساب مصاريف شحن التكيفات حسب المنطقة بعد مكالمة تاكيد الطلب.</mark></p>
+                                        <?php  } ?>
                                     </td>
                                     <td class="cart_price" style="border: 1px; border-style: inset;">
                                         <?php if ($row79['BSale'] == 1) { ?>
