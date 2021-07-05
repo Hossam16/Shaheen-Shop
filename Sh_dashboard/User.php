@@ -104,7 +104,7 @@ class User
         }
 	}
 	
-	public function Login($username,$password){
+	static public function Login($username,$password){
 		// Both fields are being posted and there not empty
 		$conn=new config();
 		// $username = mysqli_real_escape_string($conn->datacon(),$username); // Set variable for the username
@@ -162,4 +162,3 @@ class User
 	
 	
 }
-?>
