@@ -9,6 +9,7 @@ $Result=array();
 
 while ($FetchData=$Queryresult->fetch_assoc()){
     if($FetchData['CompanyID'] < 5) {
+        $FetchData['Size']='Big';
         $Result[] = $FetchData;
     }
     else
