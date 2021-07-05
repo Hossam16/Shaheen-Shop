@@ -319,16 +319,28 @@ window.location = \"shop.php?ID=\" + $cid
                     ?>
                         <div class="col-sm-4" id="phone2">
                             <?php
-                            if ($row4['Size'] == 'Free') {
+                            // if ($row4['Size'] == 'Free') {
                             ?>
-                                <a href="shop.php?Free=1">
-                                    <div style="text-align: center;"><img src="images/home/free.png<?php echo  "?" . time(); ?>" alt="" style="width: 100%;" /></div>
+                                <!-- <a href="shop.php?Free=1">
+                                    <div style="text-align: center;"><img src="images/home/free.png -->
+                                    <?php
+                                    //  echo  "?" . time(); 
+                                     ?>
+                                     <!-- " alt="" style="width: 100%;" /></div> -->
                                 </a>
-                            <?php } else { ?>
-                                <a href="shop.php?Free=1">
-                                    <div style="text-align: center;"><img src="images/home/freee.png<?php echo  "?" . time(); ?>" alt="" style="width: 100%;" /></div>
-                                </a>
-                            <?php } ?>
+                            <?php 
+                        // } else { 
+                            ?>
+                                <!-- <a href="shop.php?Free=1">
+                                    <div style="text-align: center;"><img src="images/home/freee.png
+                                    <?php
+                                    //  echo  "?" . time(); 
+                                     ?>
+                                     " alt="" style="width: 100%;" /></div>
+                                </a> -->
+                            <?php 
+                        // }
+                         ?>
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">

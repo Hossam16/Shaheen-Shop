@@ -322,12 +322,24 @@ window.location = \"shop_ar.php?ID=\" + $cid
                         ?>
                         <div class="col-sm-4" id="phone2" >
                             <?php
-                        if ($row4['Size']=='Free') {
+                        // if ($row4['Size']=='Free') {
                          ?>
-                            <a href="shop_ar.php?Free=1"><div style="text-align: center"><img src="images/home/free.png<?php echo  "?" . time(); ?>" style="width: 100%;" alt="" /></div></a>
-                    <?php }else{ ?>
-                        <a href="shop_ar.php?Free=1"><div style="text-align: center"><img src="images/home/freee.png<?php echo  "?" . time(); ?>" style="width: 100%;" alt="" /></div></a>
-                    <?php } ?>
+                            <!-- <a href="shop_ar.php?Free=1"><div style="text-align: center"><img src="images/home/free.png -->
+                            <?php
+                            //  echo  "?" . time(); 
+                             ?>
+                             <!-- " style="width: 100%;" alt="" /></div></a> -->
+                    <?php 
+                // }else{ 
+                    ?>
+                        <!-- <a href="shop_ar.php?Free=1"><div style="text-align: center"><img src="images/home/freee.png -->
+                        <?php
+                        //  echo  "?" . time(); 
+                        ?>
+                        <!-- " style="width: 100%;" alt="" /></div></a> -->
+                    <?php 
+                // } 
+                ?>
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
