@@ -267,10 +267,16 @@ window.location = \"cartview_ar.php\"
                             <p><b>الحالة :</b> جديد</p>
                             <p><b>الماركة :</b> سنتر شاهين </p>
                             <?php
-                        if ($free=='Free') {
+                        // if ($free=='Free') {
                          ?>
-                        <a href="shop.php?Free=1"><div><img src="images/home/free.png<?php echo  "?" . time(); ?>" alt="" /></div></a>
-                    <?php } ?>
+                        <!-- <a href="shop.php?Free=1"><div><img src="images/home/free.png -->
+                        <?php 
+                        // echo  "?" . time(); 
+                        ?>
+                        <!-- " alt="" /></div></a> -->
+                    <?php 
+                // } 
+                ?>
                         </div><!--/product-information-->
                     </div>
                 </div><!--/product-details-->
