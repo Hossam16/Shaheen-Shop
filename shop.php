@@ -305,13 +305,25 @@ window.location = \"wishlist.php\"
                                     }
                                 </style>
                                 <div class="col-sm-4" id="phone2" ;>
-                                    <?php if ($row45['Size'] == 'Free') {
-
+                                    <?php
+                                    // if ($row45['Size'] == 'Free') {
                                     ?>
-                                        <div><img src="images/home/free.png<?php echo  "?" . time(); ?>" style="width: 100%;"></div>
-                                    <?php } else { ?>
-                                        <div><img src="images/home/freee.png<?php echo  "?" . time(); ?>" style="width: 100%;"></div>
-                                    <?php } ?>
+                                        <!-- <div><img src="images/home/free.png
+                                        <?php
+                                        //  echo  "?" . time(); 
+                                         ?>
+                                         " style="width: 100%;"></div> -->
+                                    <?php
+                                    // } else {
+                                    ?>
+                                        <!-- <div><img src="images/home/freee.png
+                                        <?php
+                                        //  echo  "?" . time(); 
+                                         ?>
+                                         " style="width: 100%;"></div> -->
+                                    <?php
+                                    // }
+                                    ?>
                                     <a href="single.php?ID=<?php echo $row45['ID'] ?>">
                                         <div class="product-image-wrapper">
                                             <div class="single-products">

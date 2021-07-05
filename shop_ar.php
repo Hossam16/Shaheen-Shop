@@ -352,13 +352,24 @@ window.location = \"wishlist_ar.php\"
                                     }
                                 </style>
                                 <div class="col-sm-4" id="phone2">
-                                    <?php if ($row45['Size'] == 'Free') {
-
+                                    <?php
+                                    // if ($row45['Size'] == 'Free') {
                                     ?>
-                                        <div><img src="images/home/free.png<?php echo  "?" . time(); ?>" style="width: 100%;"></div>
-                                    <?php } else { ?>
-                                        <div><img src="images/home/freee.png<?php echo  "?" . time(); ?>" style="width: 100%;"></div>
-                                    <?php } ?>
+                                    <!-- <div><img src="images/home/free.png
+                                        <?php
+                                        // echo  "?" . time(); 
+                                        ?>
+                                        " style="width: 100%;"></div> -->
+                                    <?php
+                                    // } else { 
+                                    ?>
+                                    <!-- <div><img src="images/home/freee.png
+                                        <?php
+                                        // echo  "?" . time(); 
+                                        ?>" style="width: 100%;"></div> -->
+                                    <?php
+                                    // } 
+                                    ?>
                                     <a href="single_ar.php?ID=<?php echo $row45['ID'] ?>">
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
@@ -439,7 +450,11 @@ window.location = \"wishlist_ar.php\"
                     <li class="<?php echo $class; ?>"><a href="shop_ar.php?Offers=1&Page=<?php echo $i + 1; ?>"><?php echo $i + 1; ?></a></li>
             <?php }
             } ?>
-            <li><a href="shop_ar.php?Offers=1&Page=<?php echo $_GET['Page'] + 1 + 1; ?>">&raquo;</a></li>
+            <li><a href="shop_ar.php?Offers=1&Page=
+            <?php
+            if(isset($_GET['Page'])){echo $_GET['Page'] + 1 + 1;}
+            ?>
+             ">&raquo;</a></li>
         </ul>
         </div>
         </div>
