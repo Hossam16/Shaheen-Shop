@@ -114,7 +114,7 @@ $resultOD = $connOD->datacon()->query($sqlOD);
                                 <td class="cart_description" style="border: 0; border-left: 1px;border-right: 1px; border-style: inset;">
                                     <h4><a href=""></a><?php echo $rowOD['ArName']; ?></h4>
                                     <p>Web ID :<?php echo $rowOD['ID']; ?> </p>
-                                    <?php if ($rowOD['SID'] == 2) { ?>
+                                    <?php if ($rowOD['SID'] == 2 AND $row79['Size'] == 'Free') { ?>
                                         <p><mark style="padding: 5px; background:#e81f25;border-radius: 5px;color:white;">برجاء العلم انه يتم احتساب مصاريف شحن التكيفات حسب المنطقة بعد مكالمة تاكيد الطلب.</mark></p>
                                     <?php  } ?>
                                 </td>

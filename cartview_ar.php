@@ -133,7 +133,7 @@ if (isset($_POST['UpdateInfo']) or isset($_POST['CheckOut'])) {
                                     <td class="cart_description" style="border: 1px; border-style: inset;">
                                         <h4><a href=""><?php echo $row79['ArName'] ?></a></h4>
                                         <p>Web ID : <?php echo $row79['ID']; ?></p>
-                                        <?php if ($row79['SID'] == 2) { ?>
+                                        <?php if ($row79['SID'] == 2 AND $row79['Size'] == 'Free') { ?>
                                             <p><mark style="padding: 5px; background:#e81f25;border-radius: 5px;color:white;">برجاء العلم انه يتم احتساب مصاريف شحن التكيفات حسب المنطقة بعد مكالمة تاكيد الطلب.</mark></p>
                                         <?php  } ?>
                                     </td>
