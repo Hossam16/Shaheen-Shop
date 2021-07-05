@@ -10,6 +10,7 @@ if($CatID==0)
     $Result=array();
 
     while ($FetchData=$Queryresult->fetch_assoc()){
+        $FetchData['Size']='Big';
         $Result[]=$FetchData;
     }
     
@@ -24,6 +25,7 @@ else
     $Result=array();
 
     while ($FetchData=$Queryresult->fetch_assoc()){
+        $FetchData['Size']='Big';
         $Result[]=$FetchData;
     }
 
