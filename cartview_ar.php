@@ -83,6 +83,9 @@ if (isset($_POST['UpdateInfo']) or isset($_POST['CheckOut'])) {
     $result79 = $conn79->datacon()->query($sql79);
     if (mysqli_num_rows($result79) == 0) {
         $Cart = 1;
+    }else
+    {
+        $Cart=0;
     }
     ?>
     <form method="post">
