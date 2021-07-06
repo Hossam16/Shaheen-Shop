@@ -403,34 +403,36 @@
                             </li>
                         </ul>
                         <ul class="nav nav-treeview">
+                            <li class="nav-header" style=" background-color: #00000087; border-radius: 10px;">الطلبيات الحديثة</li>
                             <li class="nav-item">
                                 <a href="newCallOrders.php" class="nav-link <?php echo $callcenter_ordersNewCall; ?>">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <p>طلبيات الكول سنتر الحديثة</p>
+                                    <i class="fas fa-phone"></i>
+                                    <p>خدمة العملاء</p>
                                 </a>
                             </li>
                         </ul>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="newWebOrders.php" class="nav-link <?php echo $callcenter_ordersNew; ?>">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <p>طلبيات ويب الحديثة</p>
+                                    <i class="fas fa-globe"></i>
+                                    <p>موقع & تطبيق هاتف</p>
                                 </a>
                             </li>
                         </ul>
                         <ul class="nav nav-treeview">
+                            <li class="nav-header" style=" background-color: #00000087; border-radius: 10px;">تأكيدات المخزن</li>
                             <li class="nav-item">
                                 <a href="stockReternCall.php" class="nav-link <?php echo $callcenter_ordersRstock; ?>">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <p>تاكيد مخزن كول سنتر</p>
+                                    <i class="fas fa-phone"></i>
+                                    <p>خدمة العملاء</p>
                                 </a>
                             </li>
                         </ul>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="stockReternWeb.php" class="nav-link <?php echo $callcenter_ordersRstockWeb; ?>">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <p>تاكيد مخزن ويب</p>
+                                    <i class="fas fa-globe"></i>
+                                    <p>موقع & تطبيق هاتف</p>
                                 </a>
                             </li>
                         </ul>

@@ -8,6 +8,7 @@ $Queryresult=$connection->datacon()->query($Sql);
 $Result=array();
 
 while ($FetchData=$Queryresult->fetch_assoc()){
+    $FetchData['Size'] = 'Big';
     $Result[]=$FetchData;
 }
 
