@@ -111,7 +111,8 @@ $msg = 0;
                                             $NumberOfOrders++;
                                         ?>
                                             <tr>
-                                                <td><a href="editorderdataweb.php?OID=<?php echo ($roww['ID']); ?>"><?php echo ($roww['ID']); ?></a><br><img src="dist\img\Card.png" style="width: 80px;"></td>
+                                                <td><a href="editorderdataweb.php?OID=<?php echo ($roww['ID']); ?>"><?php echo ($roww['ID']); ?></a><br>
+                                                <?php if($roww['Visa'] == 1){ ?><img src="dist\img\Card.png" style="width: 80px;"><?php } ?></td>
                                                 <td><?php echo ($roww['CName']); ?></td>
                                                 <td><?php echo ($roww['Location']); ?></td>
                                                 <td><?php echo ($roww['Governorate']); ?></td>
