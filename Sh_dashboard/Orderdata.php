@@ -56,7 +56,7 @@ class Orderdata
 	}
 	
 	
-	public function ViewOrderdata($OID)
+	static public function ViewOrderdata($OID)
 	{
 		$conn=new config();
         $sql = "SELECT dashorderdata.*,dashorderdata.Price AS OPP,products.ArName,products.BSale,products.SalePrice,products.Photo AS Code,products.Price FROM `dashorderdata` INNER JOIN products on dashorderdata.PID=products.ID WHERE OID=$OID";
@@ -95,7 +95,7 @@ class Orderdata
             echo "Error: " . $sql . "<br>" . $conn->datacon()->error;
         }
     }
-public function changeAvailability($availability,$NewAlternative,$ID)
+static public function changeAvailability($availability,$NewAlternative,$ID)
 	{
 		$conn=new config();
         $sql = "UPDATE `dashorderdata` SET `Availability`='$availability',`Alternative`='$NewAlternative' WHERE dashorderdata.ID='$ID'";
@@ -105,7 +105,7 @@ public function changeAvailability($availability,$NewAlternative,$ID)
             echo "Error: " . $sql . "<br>" . $conn->datacon()->error;
         }
 	}
-  public function changeWebAvailability($availability,$Alternative,$ID)
+  static public function changeWebAvailability($availability,$Alternative,$ID)
 	{
 		$conn=new config();
         $sql = "UPDATE orderdata SET `Availability`='$availability',`Alternative`='$Alternative' WHERE orderdata.ID='$ID'";
@@ -120,7 +120,7 @@ public function changeAvailability($availability,$NewAlternative,$ID)
 
   // Json functions ...
 
-  public function EditPPInOD($NewPPrice,$itemID,$OID,$total,$ODC)
+  static public function EditPPInOD($NewPPrice,$itemID,$OID,$total,$ODC)
 	{
     $conn=new config();
     $sql = "UPDATE `dashorderdata` SET `Price`=$NewPPrice ,`Count`=$ODC WHERE dashorderdata.ID=$itemID;";
@@ -142,7 +142,7 @@ public function changeAvailability($availability,$NewAlternative,$ID)
 
   // Json functions ...
 
-  public function changeWebODP($NewPPrice,$PCount,$itemID,$OID,$total)
+  static public function changeWebODP($NewPPrice,$PCount,$itemID,$OID,$total)
 	{
 		$conn=new config();
     $sql = "UPDATE `orderdata` SET `PPrice`=$NewPPrice,`Count`=$PCount WHERE orderdata.ID=$itemID;";

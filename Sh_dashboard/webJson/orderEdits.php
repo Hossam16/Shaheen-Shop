@@ -36,11 +36,11 @@
                 }
                 break;
                case 'UpdateStatusWeb':
-                if( !is_array($_POST['arguments']) || (count($_POST['arguments']) < 2) ) {
+                if( !is_array($_POST['arguments']) || (count($_POST['arguments']) < 3) ) {
                     $aResult['error'] = 'Error in arguments!';
                 }
                 else {
-                    $aResult['result'] = UpdateStatusWeb(($_POST['arguments'][0]), floatval($_POST['arguments'][1]),($_POST['arguments'][2]));
+                    $aResult['result'] = UpdateStatusWeb(($_POST['arguments'][0]), floatval($_POST['arguments'][1]),($_POST['arguments'][2]),($_POST['arguments'][3]));
                 }
                 break;
                case 'UpdateOrderDataCallStatus':
@@ -95,9 +95,9 @@ function UpdateStatus($NewStatus,$OrderID,$CancelNote)
     {
      return(Order::CahngeStatus($OrderID,$NewStatus,$CancelNote));
     }
-function UpdateStatusWeb($NewStatus,$OrderID,$CancelNote)
+function UpdateStatusWeb($NewStatus,$OrderID,$CancelNote,$admin)
     {
-     return(Order::CahngeStatusWeb($OrderID,$NewStatus,$CancelNote));
+     return(Order::CahngeStatusWeb($OrderID,$NewStatus,$CancelNote,$admin));
     }
 function UpdateOrderDataCallStatus($orderDataStatus,$NewAlternative,$OrderDataID)
     {
@@ -109,7 +109,7 @@ function UpdateOrderDataCallStatus($orderDataStatus,$NewAlternative,$OrderDataID
     }
     function UpdateOrderCallStatusWeb($orderDataStatus,$OrderID)
     {
-     return(Order::CahngeStatusWeb($OrderID,$orderDataStatus,NULL));
+     return(Order::CahngeStatusWeb($OrderID,$orderDataStatus,NULL,1));
     }
 function UpdateOrderDataWebStatus($orderDataStatus,$Alternative,$OrderDataID)
     {

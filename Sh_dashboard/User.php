@@ -133,7 +133,7 @@ class User
 		
 	}
 	
-	public function selsectname($AID)
+	static public function selsectname($AID)
 	{
 				$conn=new config();
         $sql = "SELECT * FROM admin WHERE ID=$AID";
