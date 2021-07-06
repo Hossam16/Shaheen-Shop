@@ -75,7 +75,7 @@ class Products
         }
     }
 
-    public function ViewSingleProduct($PID)
+    static public function ViewSingleProduct($PID)
     {
         $conn = new config();
         $sql = "SELECT * FROM `products` WHERE products.id=$PID";

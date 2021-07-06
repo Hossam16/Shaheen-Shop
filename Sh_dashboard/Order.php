@@ -150,7 +150,7 @@ class Order
             echo "Error: " . $sql . "<br>" . $conn->datacon()->error;
         }
 	}
-	public function ViewAllOrdersWebTA($Date,$Status)
+	Static public function ViewAllOrdersWebTA($Date,$Status)
 	{
         $conn=new config();
         if($Status=='Pniding')

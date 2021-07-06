@@ -67,7 +67,7 @@ class Orderdata
         }
 	}
 	
-	public function ViewOrderdataweb($OID)
+	static public function ViewOrderdataweb($OID)
 	{
 		$conn=new config();
         $sql = "SELECT orderdata.id AS ODID,products.BSale,products.Photo,Alternative,products.SalePrice,products.ID AS PID,products.Photo AS Code,orderdata.Count,orderdata.ID,orderdata.PPrice,orderdata.Availability,products.ArName,products.Price FROM `orderdata` INNER JOIN products on orderdata.PID=products.ID WHERE OID=$OID";
