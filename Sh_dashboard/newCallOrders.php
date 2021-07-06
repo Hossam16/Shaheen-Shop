@@ -265,7 +265,7 @@ $NumberOfOrders = 0;
                                                     dataType: 'json',
                                                     data: {
                                                         functionname: 'UpdateStatus',
-                                                        arguments: [NewStatus, OrderID, CancelNote]
+                                                        arguments: [NewStatus, OrderID, CancelNote,<?php echo $_SESSION['AID']; ?>]
                                                     },
 
                                                     success: function(obj, textstatus) {

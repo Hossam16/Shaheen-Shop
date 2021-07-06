@@ -279,7 +279,7 @@ class Order
             echo "Error: " . $sql . "<br>" . $conn->datacon()->error;
         }
     }
-    static public function CahngeStatus($OID, $Status, $CancelNote)
+    static public function CahngeStatus($OID, $Status, $CancelNote, $admin)
     {
         $conn = new config();
         if ($CancelNote == Null) {
@@ -292,16 +292,27 @@ class Order
             if ($Status == 'Ready To Shipping') {
                 $sql2 = "UPDATE `dashorderdata` SET `Availability`='Available' WHERE dashorderdata.OID='$OID'";
                 if ($conn->datacon()->query($sql2)) {
+                    $sql3 = "INSERT INTO `orderlogs`(`OID`, `StatusFrom`, `StatusTo`,`AdminID`) VALUES ('$OID','sss','$Status',$admin)";
+                    if ($conn->datacon()->query($sql3)) {
+                        return "Success";
+                    } else {
+                        echo "Error: " . $sql3 . "<br>" . $conn->datacon()->error;
+                    }
                 } else {
                     echo "Error: " . $sql2 . "<br>" . $conn->datacon()->error;
                 }
             }
-            return "Success";
+            $sql3 = "INSERT INTO `orderlogs`(`OID`, `StatusFrom`, `StatusTo`,`AdminID`) VALUES ('$OID','sss','$Status',$admin)";
+            if ($conn->datacon()->query($sql3)) {
+                return "Success";
+            } else {
+                echo "Error: " . $sql3 . "<br>" . $conn->datacon()->error;
+            }
         } else {
             echo "Error: " . $sql . "<br>" . $conn->datacon()->error;
         }
     }
-    static public function CahngeStatusWeb($OID, $Status, $CancelNote,$admin)
+    static public function CahngeStatusWeb($OID, $Status, $CancelNote, $admin)
     {
         $conn = new config();
         if ($CancelNote == NULL) {
